@@ -66,11 +66,11 @@ class Perceptron:
         """
 
         # перемножаем матрицу входных данных на матрицу весов и прибавляем смещение
-        sum_vector_matrix = input_matrix.dot(self.w) + self.b
+        sum_vector_matrix = input_matrix.dot(self.w) + self.b # сумматорная функция
         # активационное правило перцептрона:
         # если для i-го примера сумма произведений весов на входные параметры признаков + смещение > 0,
         # то алгоритм угадал с ответом и в активационную матрицу записывается 1, иначе 0.
-        activation_vector_matrix = sum_vector_matrix > 0
+        activation_vector_matrix = sum_vector_matrix > 0 # активационная функция
         return activation_vector_matrix
 
     def train_on_single_example(self, example, y):
